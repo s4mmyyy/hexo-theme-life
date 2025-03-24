@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <%- partial('_partial/head') %>
+    <body>
+        <div class="container">
+            <%- partial('_partial/header') %>
+            <%- body %>
+            <!--body是一个变量，代表页面的主要内容。在渲染模板时，这个变量会被替换为实际的内容。-->
+            <%- partial('_partial/footer') %>
+        </div>
+    </body>
+</html>
