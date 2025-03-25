@@ -1,0 +1,12 @@
+<h1>Hello World</h1>
+
+<section class = "posts">
+    <% page.posts.each(function(post) { %>
+        <div class="post">
+            <a class="post=title-link" href="<%- url_for(post.path) %>"> <%= post.title %> </a>
+        </div>
+        <div class = "post-meta">
+            <span class="post-time"><%- date(post.date,"YYYY-MM-DD") %></span>
+        </div>
+    <% })%>
+</section>
