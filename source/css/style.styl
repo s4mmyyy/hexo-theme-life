@@ -8,8 +8,13 @@ body {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 @import "../_partial/header";
 @import "../_partial/index";
 @import "../_partial/footer";
+@import "../_partial/page-nav";
+@import "../_partial/post";

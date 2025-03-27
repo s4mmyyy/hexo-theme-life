@@ -1,0 +1,9 @@
+<% if (is_current(theme.menu.Technical)) { %>
+    <%- partial('_partial/technical.ejs') %>
+    <% } else if (is_current(theme.menu.Other)) { %>
+    <%- partial('_partial/other') %>
+    <% } else if (is_current(theme.menu.Journals)) { %>
+    <%- partial('_partial/journals') %>
+    <% } else { %>
+    <%- partial('_partial/custom') %>
+    <% } %>

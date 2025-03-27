@@ -1,8 +1,11 @@
 <% if (page.total> 1 ){ %>
-    <nav clas="page-nav">
-    <%- paginator ({
-        prev_text: "&laquo; Prev",
-        next_text: "Next &raquo;"    
-    }) %>
-    </nav>
+    <div class="post">
+        <%- paginator(
+            {
+                prev_text: '<span class="page-nav">上一页</span>',
+                next_text: '<span class="page-nav">下一页</span>',
+                escape: false
+            }
+        ) %>
+    </div>
 <% } %>

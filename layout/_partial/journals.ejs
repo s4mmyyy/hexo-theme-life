@@ -1,0 +1,28 @@
+<section class="posts">
+
+    <% site.categories.each(function (category) { %>
+        <% if (category.name === "周报") { %>
+
+            <div class="post">
+                <h1 style="color: #eaedf3;"> <%= category.name %> </h1>
+            </div>
+            <div class="post">
+                <p style="color: #eaedf3;"> 生活流水账 </p>
+            </div>
+            
+            <% var reversedPosts = category.posts.slice().reverse(); %>
+            <% reversedPosts.forEach(function(post) { %>
+            <div class="post">
+                <div class="post-meta">
+                    <span> <%= date(post.date, "YYYY-MM-DD") %> </span>
+                </div>
+            
+                <div>
+                    <a class="post-title"  href="<%- url_for(post.path) %>"><%= post.title %></a>
+                </div>
+            </div>
+            <% }) %>
+        <% } %>
+    <% }) %>
+
+</section>
