@@ -6,7 +6,7 @@
             <div class="post">
                 <h1 style="color: #eaedf3;"> <%= category.name %> </h1>
             </div>
-            <div class="post">
+            <div class="post-header">
                 <p style="color: #eaedf3;"> 生活流水账 </p>
             </div>
             
@@ -20,9 +20,11 @@
                 <div>
                     <a class="post-title"  href="<%- url_for(post.path) %>"><%= post.title %></a>
                 </div>
+                
             </div>
+            
             <% }) %>
         <% } %>
     <% }) %>
-
+    <div class="post-block"></div>
 </section>

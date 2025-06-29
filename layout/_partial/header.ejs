@@ -5,8 +5,7 @@
     <nav class="navbar">
         <ul class="menu">
             <% for (name in theme.menu) { %>
-                <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%= name %></a>
-                
+                <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%= name %></a>   
             <% } %>
         </ul>
     

@@ -2,5 +2,12 @@ menu:
   Home: /
   Journals: /journals/
   Technical: /technical/
-  Other: /other
+  Other: /other/
   About: /about/
+
+# 代码块配置
+codeblock:
+  copy_button: true
+  line_numbers: true
+  highlight_theme: 'github'
+  show_language: true

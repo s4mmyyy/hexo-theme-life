@@ -1,5 +1,7 @@
 <article class="post-content">
-    <div class="post-title">
+
+<script>hljs.highlightAll();</script>    
+<div class="post-title">
         <h2><%= page.title %></h2>
     </div>
     <div>
@@ -9,4 +11,6 @@
         <%- page.content %>
     </div>
 </article>
+
+<script src="<%- url_for('/js/codeblock.js') %>"></script>
 <!--显示文章页相关内容-->

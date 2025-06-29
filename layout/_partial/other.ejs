@@ -5,8 +5,8 @@
             <div class="post">
                 <h1 style="color: #eaedf3;"> <%= category.name %> </h1>
             </div>
-            <div class="post">
-                <p style="color: #eaedf3;"> 一些技术之外的文章 </p>
+            <div class="post-header">
+                <p style="color: #eaedf3;"> 杂文存放地 </p>
             </div>
             <% var reversedPosts = category.posts.slice().reverse(); %>
             <% reversedPosts.forEach(function(post) { %>
@@ -22,5 +22,5 @@
             <% }) %>
         <% } %>
     <% }) %>
-
+    <div class="post-block"></div>
 </section>
