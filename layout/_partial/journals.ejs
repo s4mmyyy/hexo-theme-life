@@ -10,8 +10,10 @@
                 <p style="color: #eaedf3;"> 生活流水账 </p>
             </div>
             
-            <% var reversedPosts = category.posts.slice().reverse(); %>
-            <% reversedPosts.forEach(function(post) { %>
+            
+            <% var sortedPosts = category.posts.sort('date', -1); %>
+            
+            <% sortedPosts.forEach(function(post) { %>
             <div class="post">
                 <div class="post-meta">
                     <span> <%= date(post.date, "YYYY-MM-DD") %> </span>

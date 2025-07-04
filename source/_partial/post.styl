@@ -24,42 +24,60 @@
     color: #eaedf3;
 }
 
-/* 代码块容器 */
-.highlight {
+/* 代码块样式 */
+
+
+/* 代码块容器样式 */
+.highlight, 
+.post-content pre {
   position: relative;
   margin: 1em 0;
+  padding: 1em;  /* 移到这里 */
   border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* 代码内容 */
-.highlight pre {
-  margin: 0;
-  padding: 1em;
-  overflow-x: auto;
+  overflow: auto;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.35);
+  background: rgb(40, 44, 52);
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 0.9em;
   line-height: 1.5;
+  color: #f8f8f8;
 }
 
-/* 行号 */
-.highlight .gutter {
-  background: #f8f8f8;
-  color: #999;
-  padding: 1em 0.5em;
-  text-align: right;
-  user-select: none;
+/* 如果 .highlight 内部还有 pre 元素，则重置其样式 */
+.highlight pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+/* 确保内部的 code 元素不产生额外样式 */
+.post-content pre code {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
-/* 语言标签 */
-.highlight::before {
-  content: attr(data-lang);
+/* 复制按钮样式 */
+.copy-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2em 0.5em;
-  font-size: 0.8em;
-  background: rgba(0,0,0,0.1);
-  color: #666;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background: #005a9e;
 }

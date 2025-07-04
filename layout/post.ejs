@@ -11,6 +11,8 @@
         <%- page.content %>
     </div>
 </article>
-
+<!--把higlightAll放到最后，确保DOM都加载完成-->
+<script>hljs.highlightAll();</script>
 <script src="<%- url_for('/js/codeblock.js') %>"></script>
+
 <!--显示文章页相关内容-->
